@@ -1,0 +1,14 @@
+name: Build on Push
+
+on:
+  push:
+    branches:
+      - main  # This triggers the workflow on pushes to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can choose a different runner OS if needed
+    steps:
+      - uses: actions/checkout@v3  # Checks out your code from the repository
+      - name: Run wasp build
+        run: wasp build  # This will execute your build command
