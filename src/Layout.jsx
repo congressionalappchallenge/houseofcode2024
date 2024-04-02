@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAuth, logout } from "wasp/client/auth";
 import { getUsername } from "wasp/auth";
+import logo from "./assets/CAC-logo.svg"
 import "./Main.css";
 
 export const Layout = ({ children }) => {
@@ -10,6 +11,7 @@ export const Layout = ({ children }) => {
     <div className="flex flex-col min-h-screen">
       <header className="bg-primary-800 text-white p-4">
         <div className="container mx-auto px-4 py-2 flex justify-between">
+          <img className="w-9" src={logo} alt="" />
           <Link to="/">
             <h1 className="text-xl2 font-semibold">#HouseOfCode 2024</h1>
           </Link>

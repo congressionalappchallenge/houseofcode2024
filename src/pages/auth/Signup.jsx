@@ -18,9 +18,9 @@ export default function Signup() {
               }}
             />
             <div className="mt-4 text-center">
-              If you already have an account go to{" "}
+              Already have an account?{" "}
               <Link to="/login" className="text-primary-500 hover:text-primary-800 underline">
-                login
+                Log in here
               </Link>
               .
             </div>

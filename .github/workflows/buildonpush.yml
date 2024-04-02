@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest  # You can choose a different runner OS if needed
     steps:
       - uses: actions/checkout@v3  # Checks out your code from the repository
+      - name: Install wasp
+        run: curl -sSL https://get.wasp-lang.dev/installer.sh | sh
       - name: Run wasp build
         run: wasp build  # This will execute your build command
