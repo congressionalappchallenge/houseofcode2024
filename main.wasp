@@ -7,6 +7,7 @@ app CongressionalAppChallenge2024 {
     rootComponent: import { Layout } from "@src/Layout.jsx",
   },
   db: {
+    system: PostgreSQL,
     prisma: {
       clientPreviewFeatures: ["extendedWhereUnique"]
     }
