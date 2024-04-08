@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+}
+
+.headerText {
+    line-height: 0px;
+    padding: 15px;
+}
+
+.headerTextContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoGroup {
+    max-width: fit-content;
+}
+
+.logoImg > img {
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.layoutContainer {
+    display: flex;
+}
+
+.mainContainer {
+    width: 100%;
+    padding: 1.5em;
+}
+
+.burger {
+    z-index: 5;
+    color: purple !important;
+    background-color: orange !important;
+}
+
+.dummyNav {
+    width: rem(80px) !important;
+    height: rem(750px) !important;
+}
