@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export async function getAllLibraryRecords(req, res) {
+export async function getAllLibraryRecords(req: any, res: any) {
     try {
         // const libraryRecords = await prisma.library.findMany({});
 
