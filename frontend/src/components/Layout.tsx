@@ -5,6 +5,7 @@ import { IconLayoutSidebarLeftCollapse, IconLayoutSidebarRightCollapse } from '@
 import logo from '../assets/CAC-logo.svg'
 import Navbar from './Navbar'
 import classes from './layout.module.css'
+import Map from './Map'
 
 export function Layout (): React.ReactElement {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure()
@@ -49,6 +50,7 @@ export function Layout (): React.ReactElement {
         <AppShell.Main className={classes.mainContainer}>
             <Container>
                 <Text>Current Tab Will Go Here!</Text>
+                <Map />
             </Container>
         </AppShell.Main>
       </Container>

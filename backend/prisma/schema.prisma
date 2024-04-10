@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model library {
+  id                     String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  state_name             String?   @db.VarChar(255)
+  state_fips             Int?
+  state_abbreviation     String?   @db.VarChar(2)
+  congressional_district String?   @db.VarChar(10)
+  app_title              String?   @db.VarChar(255)
+  latitude               Float?
+  longitude              Float?
+  description            String?
+  last_updated           DateTime? @db.Timestamptz(6)
+  challengers            Json?
+}
+
+model Library {
+  id                    Int      @id @default(autoincrement())
+  stateName             String   @db.VarChar(255)
+  stateFips             Int
+  stateAbbreviation     String   @db.VarChar(2)
+  congressionalDistrict String   @db.VarChar(10)
+  appTitle              String   @db.VarChar(255)
+  latitude              Float
+  longitude             Float
+  description           String   @db.VarChar(255)
+  lastUpdated           DateTime
+  challengers           Json
+}
