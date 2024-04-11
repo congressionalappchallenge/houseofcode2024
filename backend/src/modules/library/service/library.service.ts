@@ -4,9 +4,7 @@ const prisma = new PrismaClient();
 
 export async function getAllLibraryRecords(req: any, res: any) {
     try {
-        const libraryRecords = await prisma.library.findMany({});
-        // const libraryRecords = await prisma.$queryRaw`SELECT * FROM "public"."library"`;
-
+        const libraryRecords = await prisma.$queryRaw`SELECT * FROM "public"."library"`;
         res.json(libraryRecords);
     } catch (error) {
         console.error(error);
@@ -18,7 +16,6 @@ export async function updateLibraryRecord(req: any, res: any) {
     try {
 
         const libraryRecords: any = await prisma.$queryRaw`SELECT * FROM "public"."library" WHERE congressional_district = ${req.params.id}`;
-        
         
         const libraryRecord = libraryRecords[0];
         
