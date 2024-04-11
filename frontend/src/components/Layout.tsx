@@ -49,7 +49,6 @@ export function Layout (): React.ReactElement {
         {(desktopOpened || mobileOpened) ? <Navbar /> : <div className={classes.dummyNav} />}
         <AppShell.Main className={classes.mainContainer}>
             <Container>
-                <Text>Current Tab Will Go Here!</Text>
                 <Map />
             </Container>
         </AppShell.Main>
