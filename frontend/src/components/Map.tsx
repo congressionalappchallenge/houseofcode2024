@@ -1,10 +1,23 @@
 import React from 'react';
 import USStateMap from 'react-us-state-map';
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
+import { useQuery } from '@tanstack/react-query';
 import classes from './map.module.css';
 
 export default function Map () {
+
+    const { isPending, error, data } = useQuery({
+        queryKey: ['repoData'],
+        queryFn: () =>
+          fetch('https://houseofcode2024-backend.onrender.com/api/library').then((res) =>
+            res.json(),
+          ),
+      })
     
+    if (isPending) return 'Loading...'
+
+    if (error) return 'An error has occurred: ' + error.message
+
     const handleStateClick = (stateAbbreviation: string) => {
         console.log(stateAbbreviation);
     }
@@ -17,11 +30,12 @@ export default function Map () {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[38.8937255,-77.0969766]}>
+            {data.map((app: any) => (<Marker position={[app.latitude,app.longitude]}>
                 <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
+                <h4>{app.congressional_district}: {app.app_title}</h4> <br /> {app.challengers && <h5>{app.challengers.join(',')}</h5>} <br /> {app.description}.
                 </Popup>
-            </Marker>
+            </Marker>))
+            }
         </MapContainer>
     );
 }

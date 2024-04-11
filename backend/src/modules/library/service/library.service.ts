@@ -17,7 +17,9 @@ export async function getAllLibraryRecords(req: any, res: any) {
 export async function updateLibraryRecord(req: any, res: any) {
     try {
 
-        const libraryRecords = await prisma.$queryRaw`SELECT * FROM "public"."library" WHERE congressional_district = ${req.params.id}`;
+        const libraryRecords: any = await prisma.$queryRaw`SELECT * FROM "public"."library" WHERE congressional_district = ${req.params.id}`;
+        
+        
         const libraryRecord = libraryRecords[0];
         
         var newChallengers = [req.body.name];

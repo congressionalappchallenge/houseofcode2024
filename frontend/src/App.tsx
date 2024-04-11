@@ -1,5 +1,11 @@
 import { Button, MantineProvider, Text, createTheme } from '@mantine/core'
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 import { Layout } from './components/Layout'
+
+const queryClient = new QueryClient()
 
 const theme = createTheme({
   colors: {
@@ -12,8 +18,10 @@ const theme = createTheme({
 
 export default function App () {
   return (
-    <MantineProvider theme={theme} classNamesPrefix="CAC">
-      <Layout />
-    </MantineProvider>
+    <QueryClientProvider client={queryClient}>
+      <MantineProvider theme={theme} classNamesPrefix="CAC">
+        <Layout />
+      </MantineProvider>
+    </QueryClientProvider>
   )
 }
