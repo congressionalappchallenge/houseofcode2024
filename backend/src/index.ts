@@ -12,7 +12,7 @@ app.use(API_PREFIX, libraryRouter());
 
 // Hello world route
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Welcome to the 2024 #HouseOfCode backend!');
 });
 
 const port = process.env.PORT || 3000;

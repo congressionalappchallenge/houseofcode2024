@@ -19,6 +19,7 @@ model library {
   description            String?
   last_updated           DateTime? @db.Timestamptz(6)
   challengers            Json?
+  member                 String?   @db.VarChar(256)
 }
 
 model Library {
@@ -33,4 +34,5 @@ model Library {
   description           String   @db.VarChar(255)
   lastUpdated           DateTime
   challengers           Json
+  member                String   @db.VarChar(256)
 }
