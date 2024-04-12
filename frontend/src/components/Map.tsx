@@ -1,5 +1,4 @@
 import React from 'react';
-import USStateMap from 'react-us-state-map';
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
 import { useQuery } from '@tanstack/react-query';
 import classes from './map.module.css';
