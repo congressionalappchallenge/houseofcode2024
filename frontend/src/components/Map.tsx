@@ -12,13 +12,13 @@ export default function Map () {
           ),
       })
     
-    if (isPending) return 'Loading...'
+    if (isPending) return <></>
 
     if (error) return 'An error has occurred: ' + error.message
 
     return (
 
-        <MapContainer className={classes.mapContainer} center={[52.5704983,-92.8990079]} zoom={3} scrollWheelZoom={true}>
+        <MapContainer className={classes.mapContainer} center={[38.7946525,-98.8240124]} zoom={4} scrollWheelZoom={true}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
