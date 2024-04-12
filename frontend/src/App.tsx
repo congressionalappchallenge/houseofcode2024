@@ -1,4 +1,4 @@
-import { Button, MantineProvider, Text, createTheme } from '@mantine/core'
+import { MantineProvider, createTheme } from '@mantine/core'
 import {
   QueryClient,
   QueryClientProvider,

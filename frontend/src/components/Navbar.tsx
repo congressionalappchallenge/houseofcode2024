@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
-import { Center, Tooltip, UnstyledButton, Stack, Avatar, AppShell, rem } from '@mantine/core'
+import { useState } from 'react'
+import { Tooltip, UnstyledButton, Stack, AppShell, rem } from '@mantine/core'
 import {
   IconHome2,
   IconMapPinSearch,
   IconDeviceDesktopAnalytics
 } from '@tabler/icons-react'
-import logo from '../assets/CAC-logo.svg'
 import classes from './navbar.module.css'
 
 interface NavbarLinkProps {

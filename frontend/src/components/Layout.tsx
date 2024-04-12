@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppShell, Center, Group, ActionIcon, Avatar, Text, Container, rem } from '@mantine/core'
+import { AppShell, Center, Group, ActionIcon, Avatar, Container, rem } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { IconLayoutSidebarLeftCollapse, IconLayoutSidebarRightCollapse } from '@tabler/icons-react'
 import logo from '../assets/CAC-logo.svg'
