@@ -29,9 +29,12 @@ export default function Map () {
                     <h4>{app.congressional_district}: {app.app_title}</h4>
                 </a>
                 <br />
+                <h5>Rep. {app.member}</h5>
+                {app.challengers && <br />}
                 {app.challengers && <h5>{app.challengers.join(',')}</h5>}
-                <br />
+                {app.description && <br />}
                 {app.description}
+                <br/>
                 <a href={`https://www.congressionalappchallenge.us/23-${app.congressional_district}/`}>Demo Video & Official Press Release</a>
                 </Popup>
             </Marker>))
