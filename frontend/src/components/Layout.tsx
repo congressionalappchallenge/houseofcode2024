@@ -42,7 +42,7 @@ export function Layout (): React.ReactElement {
                 </ActionIcon>)}
         </Group>
         <Center className={classes.headerTextContainer}>
-            <h1 className={classes.headerText}>Congressional App Challenge</h1>
+            <h1 className={classes.headerText}>CAC House of Code 2024</h1>
         </Center>
       </AppShell.Header>
       <Container className={classes.layoutContainer}>

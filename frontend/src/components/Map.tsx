@@ -25,7 +25,7 @@ export default function Map () {
     return (
         // <USStateMap onClick={handleStateClick} />
 
-        <MapContainer center={[52.5704983,-92.8990079]} zoom={3} scrollWheelZoom={true} className={classes.mapContainer}>
+        <MapContainer className={classes.mapContainer} center={[52.5704983,-92.8990079]} zoom={3} scrollWheelZoom={true} className={classes.mapContainer}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
